@@ -7,26 +7,30 @@ namespace IterationStatements
     {
         static void Main(string[] args)
         {
-                //TODO - Read each comment and complete its instruction
-                // like the example below
+            //TODO - Read each comment and complete its instruction
+            // like the example below
 
-                //Create a List called "numbers" - DONE!
-                var numbers = new List<int>();
-            
+            //Create a List called "numbers" - DONE!
+            List<int> numbers = new List<int>();
+
             //-----START HERE------------------------------------------
             //Create a variable of type int and name it num
             //initialize the variable with a value of 0
 
-
+            int num = 0;
 
             // Create a do-while loop and use the template below:
 
             {
                 // Increment num by 1
+                do
+                {
+                    num++;
 
                 // Then add num to the collection - numbers
                     // Hint: reference num inside of the Add method's parentheses
-                numbers.Add(/* num */);
+                    numbers.Add(num);
+                } while (num < 100);
 
             } // <---- While your variable is less than 100
 
@@ -37,32 +41,46 @@ namespace IterationStatements
             {
                 // Increment num by 1
                 // Then add num to the collection numbers
-                    //HINT: copy how this was done in the do while loop
+                //HINT: copy how this was done in the do while loop
+                do
+                {
+                    num++;
 
+                    // Then add num to the collection - numbers
+                    // Hint: reference num inside of the Add method's parentheses
+                    numbers.Add(num);
+                } while (num < 200);
             }
 
-
-            // This is to show the user that the numbers will start increasing on the console
             Console.WriteLine("Increase:");
 
 
             // Create a foreach loop using the collection - numbers
                 //In the scope of the foreach loop, print each number in numbers
              
+            foreach (int n in numbers)
+            {
+                Console.WriteLine($"{n}");
 
+            }
 
             Console.WriteLine("");
             Console.WriteLine("Decrease:");
 
 
             // Create a for loop - this will print the numbers in reverse order - from 200 to 1
-                // in your initializer set the value of i to 199
-                // in your conditional, as long as i is less than or equal to the amount of items in "numbers" - use (numbers.Count)
-                // AND as long as i is greater than or equal to 0
-                // Decrement i by 1
+            // in your initializer set the value of i to 199
+            // in your conditional, as long as i is less than or equal to the amount of items in "numbers" - use (numbers.Count)
+            // AND as long as i is greater than or equal to 0
+            // Decrement i by 1
 
             //start for loop here
             {
+                for  (int n = 199; n <= numbers.Count; n--)
+                {
+                    Console.WriteLine(n);
+                   
+                }
                 // place numbers[i] inside of the Console.WriteLine() method
             }
 

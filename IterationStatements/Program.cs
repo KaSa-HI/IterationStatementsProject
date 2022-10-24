@@ -76,10 +76,10 @@ namespace IterationStatements
 
             //start for loop here
             {
-                for  (int n = 199; n <= numbers.Count; n--)
+                for  (int n = 199; numbers.Count > 0 ; n--)
                 {
                     Console.WriteLine(n);
-                   
+                   numbers.RemoveAt(n);
                 }
                 // place numbers[i] inside of the Console.WriteLine() method
             }

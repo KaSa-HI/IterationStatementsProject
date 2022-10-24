@@ -21,43 +21,43 @@ namespace IterationStatements
 
             // Create a do-while loop and use the template below:
 
+
+            // Increment num by 1
+            do
             {
-                // Increment num by 1
-                do
-                {
-                    num++;
+                num++;
 
                 // Then add num to the collection - numbers
-                    // Hint: reference num inside of the Add method's parentheses
-                    numbers.Add(num);
-                } while (num < 100);
+                // Hint: reference num inside of the Add method's parentheses
+                numbers.Add(num);
+            } while (num < 100);
 
-            } // <---- While your variable is less than 100
+            // <---- While your variable is less than 100
 
 
 
             // Create a while loop
             // <--- While num is less than 200
-            {
-                // Increment num by 1
-                // Then add num to the collection numbers
-                //HINT: copy how this was done in the do while loop
-                do
-                {
-                    num++;
 
-                    // Then add num to the collection - numbers
-                    // Hint: reference num inside of the Add method's parentheses
-                    numbers.Add(num);
-                } while (num < 200);
+            // Increment num by 1
+            // Then add num to the collection numbers
+            //HINT: copy how this was done in the do while loop
+            while (num < 200)
+            {
+                num++;
+
+                // Then add num to the collection - numbers
+                // Hint: reference num inside of the Add method's parentheses
+                numbers.Add(num);
             }
+
 
             Console.WriteLine("Increase:");
 
 
             // Create a foreach loop using the collection - numbers
-                //In the scope of the foreach loop, print each number in numbers
-             
+            //In the scope of the foreach loop, print each number in numbers
+
             foreach (int n in numbers)
             {
                 Console.WriteLine($"{n}");
@@ -75,14 +75,14 @@ namespace IterationStatements
             // Decrement i by 1
 
             //start for loop here
+
+            for (int n = 199; numbers.Count > 0; n--)
             {
-                for  (int n = 199; numbers.Count > 0 ; n--)
-                {
-                    Console.WriteLine(n);
-                   numbers.RemoveAt(n);
-                }
-                // place numbers[i] inside of the Console.WriteLine() method
+                Console.WriteLine(n);
+                numbers.RemoveAt(n);
             }
+            // place numbers[i] inside of the Console.WriteLine() method
+
 
             //------------End of exercise
         }
